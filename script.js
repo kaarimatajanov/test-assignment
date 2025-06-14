@@ -34,7 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             console.log('Form submitted!');
-            // Add your form submission logic here
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+            console.log('Form data:', data); // Показываем данные в консоли
+            // Здесь позже добавим отправку в Pipedrive API
         });
     }
 });
