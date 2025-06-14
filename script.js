@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             console.log('Form submitted!');
-            
+
             // Собираем данные формы
             const formData = new FormData(form);
             const data = {};
@@ -45,6 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Дополнительная отладка
             console.log('Raw FormData entries:', [...formData.entries()]);
+
+            // Проверка всех полей вручную
+            const allInputs = form.querySelectorAll('input, select, textarea');
+            allInputs.forEach(input => {
+                console.log(`Field ${input.name}: ${input.value}`);
+            });
             // Здесь позже добавим отправку в Pipedrive API
         });
     }
