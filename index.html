@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
     <div class="form-container">
@@ -15,14 +16,14 @@
                 <section class="form-section">
                     <h3>Client details</h3>
                     <div class="form-row">
-                        <input type="text" id="firstName" placeholder="First name" required oninvalid="this.setCustomValidity('Please fill out this field')">
-                        <input type="text" id="lastName" placeholder="Last name" required oninvalid="this.setCustomValidity('Please fill out this field')">
+                        <input type="text" id="firstName" name="firstName" placeholder="First name" required oninvalid="this.setCustomValidity('Please fill out this field')">
+                        <input type="text" id="lastName" name="lastName" placeholder="Last name" required oninvalid="this.setCustomValidity('Please fill out this field')">
                     </div>
                     <div class="form-row">
-                        <input type="tel" id="phone" placeholder="Phone number" required oninvalid="this.setCustomValidity('Please fill out this field')">
+                        <input type="tel" id="phone" name="phone" placeholder="Phone number" required oninvalid="this.setCustomValidity('Please fill out this field')">
                     </div>
                     <div class="form-row">
-                        <input type="email" id="email" placeholder="Email (optional)">
+                        <input type="email" id="email" name="email" placeholder="Email (optional)">
                     </div>
                 </section>
 
@@ -30,13 +31,13 @@
                 <section class="form-section">
                     <h3>Job details</h3>
                     <div class="form-row">
-                        <select id="jobType" required oninvalid="this.setCustomValidity('Please fill out this field')">
+                        <select id="jobType" name="jobType" required oninvalid="this.setCustomValidity('Please fill out this field')">
                             <option value="" disabled selected>Select job type</option>
                             <option value="consulting">Consulting</option>
                             <option value="repair">Repair</option>
                             <option value="installation">Installation</option>
                         </select>
-                        <select id="jobSource" required oninvalid="this.setCustomValidity('Please fill out this field')">
+                        <select id="jobSource" name="jobSource" required oninvalid="this.setCustomValidity('Please fill out this field')">
                             <option value="" disabled selected>Select job source</option>
                             <option value="website">Website</option>
                             <option value="referral">Referral</option>
@@ -44,7 +45,7 @@
                         </select>
                     </div>
                     <div class="form-row">
-                        <textarea id="descr" placeholder="Job description (optional)"></textarea>
+                        <textarea id="descr" name="description" placeholder="Job description (optional)"></textarea>
                     </div>
                 </section>
 
@@ -52,17 +53,17 @@
                 <section class="form-section">
                     <h3>Service location</h3>
                     <div class="form-row">
-                        <input type="text" id="address" placeholder="Address" required oninvalid="this.setCustomValidity('Please fill out this field')">
+                        <input type="text" id="address" name="address" placeholder="Address" required oninvalid="this.setCustomValidity('Please fill out this field')">
                     </div>
                     <div class="form-row">
-                        <input type="text" id="city" placeholder="City" required oninvalid="this.setCustomValidity('Please fill out this field')">
+                        <input type="text" id="city" name="city" placeholder="City" required oninvalid="this.setCustomValidity('Please fill out this field')">
                     </div>
                     <div class="form-row">
-                        <input type="text" id="state" placeholder="State" required oninvalid="this.setCustomValidity('Please fill out this field')">
+                        <input type="text" id="state" name="state" placeholder="State" required oninvalid="this.setCustomValidity('Please fill out this field')">
                     </div>
                     <div class="form-row">
-                        <input type="text" id="zipCode" placeholder="Zip code" required oninvalid="this.setCustomValidity('Please fill out this field')">
-                        <select id="area" required oninvalid="this.setCustomValidity('Please fill out this field')">
+                        <input type="text" id="zipCode" name="zipCode" placeholder="Zip code" required oninvalid="this.setCustomValidity('Please fill out this field')">
+                        <select id="area" name="area" required oninvalid="this.setCustomValidity('Please fill out this field')">
                             <option value="" disabled selected>Select area</option>
                             <option value="north">North</option>
                             <option value="south">South</option>
@@ -76,14 +77,14 @@
                 <section class="form-section">
                     <h3>Scheduled</h3>
                     <div class="form-row">
-                        <input type="date" id="startDate" placeholder="Start date" required oninvalid="this.setCustomValidity('Please fill out this field')">
+                        <input type="date" id="startDate" name="startDate" required oninvalid="this.setCustomValidity('Please fill out this field')">
                     </div>
                     <div class="form-row">
-                        <input type="time" id="startTime" placeholder="Start time" required oninvalid="this.setCustomValidity('Please fill out this field')">
-                        <input type="time" id="endTime" placeholder="End time" required oninvalid="this.setCustomValidity('Please fill out this field')">
+                        <input type="time" id="startTime" name="startTime" required oninvalid="this.setCustomValidity('Please fill out this field')">
+                        <input type="time" id="endTime" name="endTime" required oninvalid="this.setCustomValidity('Please fill out this field')">
                     </div>
                     <div class="form-row">
-                        <select id="testSelect" required oninvalid="this.setCustomValidity('Please fill out this field')">
+                        <select id="testSelect" name="testSelect" required oninvalid="this.setCustomValidity('Please fill out this field')">
                             <option value="" disabled selected>Select option</option>
                             <option value="option1">Option 1</option>
                             <option value="option2">Option 2</option>
