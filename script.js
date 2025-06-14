@@ -34,9 +34,17 @@ document.addEventListener('DOMContentLoaded', () => {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             console.log('Form submitted!');
+            
+            // Собираем данные формы
             const formData = new FormData(form);
-            const data = Object.fromEntries(formData);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
             console.log('Form data:', data); // Показываем данные в консоли
+
+            // Дополнительная отладка
+            console.log('Raw FormData entries:', [...formData.entries()]);
             // Здесь позже добавим отправку в Pipedrive API
         });
     }
