@@ -6,6 +6,33 @@
     <title>Contact Form</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        .button-group {
+            margin-top: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .create-job {
+            background-color: #007bff;
+            color: white;
+        }
+        .create-job:hover {
+            background-color: #0056b3;
+        }
+        .save-info {
+            background-color: #28a745;
+            color: white;
+        }
+        .save-info:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 <body>
     <div class="form-container">
@@ -93,7 +120,10 @@
                     </div>
                 </section>
             </div>
-            <button type="submit">Submit</button>
+            <div class="button-group">
+                <button type="button" class="button create-job" id="createJobBtn">Create job</button>
+                <button type="button" class="button save-info" id="saveInfoBtn">Save info</button>
+            </div>
         </form>
     </div>
     <script src="script.js"></script>
