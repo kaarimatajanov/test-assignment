@@ -87,36 +87,59 @@ select {
     padding-right: 30px;
 }
 
-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #007bff;
-    color: white;
+/* Новые стили для кнопок */
+.button-group {
+    margin-top: 20px;
+    display: flex; /* Кнопки в одной строке */
+    gap: 10px; /* Расстояние между кнопками */
+    justify-content: center; /* Центрирование кнопок */
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
     transition: background-color 0.3s;
-    margin-top: 20px;
 }
 
-button:hover {
+.create-job {
+    background-color: #007bff;
+    color: white;
+}
+
+.create-job:hover {
     background-color: #0056b3;
 }
 
+.save-info {
+    background-color: #28a745;
+    color: white;
+}
+
+.save-info:hover {
+    background-color: #218838;
+}
+
+/* Убираем старый стиль кнопки, так как теперь две кнопки */
+button {
+    width: auto; /* Убираем 100% ширину */
+    margin: 0; /* Убираем margin-top */
+}
+
+/* Адаптивность для кнопок */
 @media (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr;
+    .button-group {
+        flex-direction: column; /* Стек кнопки вертикально на маленьких экранах */
+        align-items: center; /* Центрируем вертикально */
     }
-    .form-section {
-        min-height: auto;
+    .button {
+        width: 100%; /* Полная ширина на мобильных */
+        margin-bottom: 10px; /* Расстояние между кнопками */
     }
-    .form-row {
-        flex-direction: column;
-        gap: 10px;
-    }
-    input, select, textarea {
-        width: 100%;
+    .button:last-child {
+        margin-bottom: 0; /* Убираем отступ у последней кнопки */
     }
 }
 
@@ -134,8 +157,8 @@ button:hover {
         font-size: 12px;
         padding: 8px;
     }
-    button {
+    .button {
         font-size: 14px;
-        padding: 10px;
+        padding: 8px;
     }
 }
